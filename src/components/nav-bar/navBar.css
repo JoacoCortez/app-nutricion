@@ -1,0 +1,29 @@
+#nav-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    
+    
+}
+
+#nav-container div{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;    
+    
+
+}
+
+.logo{
+    padding-right: 800px;
+
+}
+
+.nav-list{
+  position: static;
+}
+
+.nav-list a{
+    padding: 15px;
+
+}
