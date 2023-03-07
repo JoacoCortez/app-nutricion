@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
+import db from "../../db/db";
+import { collection, getDoc, getDocs, query, where } from '@firebase/firestore';
 
 function ModalFunction({onDataFlow}) {
     const [show, setShow] = useState(false);
@@ -13,6 +15,12 @@ function ModalFunction({onDataFlow}) {
     const handleShow = () => setShow(true);
 
   
+    const calPerProt = 4.00
+    const calPerCarb = 4.00
+    const calPerFat = 9.00
+    //Meals properties are calculated per gram
+    
+    
     function handleChange(e){
 
         setFormData(({
@@ -20,26 +28,50 @@ function ModalFunction({onDataFlow}) {
         }))
 
     }
-
     
-    function handleSubmit(e){
+    
+    
+    
+    
+    async function handleSubmit(e){
         e.preventDefault()
         
-        const macroData = formData.meal * formData.quantity
-
-        console.log(macroData)
-
-        const data = {
-            meal: formData.meal,
-            quantity: formData.quantity,
-            calories: macroData
+        
+        const mealList = collection(db, "meals")
+        const mealNutrients = query(mealList, where("meal", "==", formData.meal))
+        
+        await getDocs(mealNutrients)
+        .then((snapshot) =>{
+            const mealData =  snapshot.docs[0].data()
+            console.log(mealData)
+            
+                function calculateCalories(){
+                    const protein = mealData.nutrients.protein * calPerProt 
+                    const carbs = mealData.nutrients.carbs * calPerCarb 
+                    const fats = mealData.nutrients.fats * calPerFat 
+            
+                    const macroData = protein * formData.quantity + carbs * formData.quantity + fats * formData.quantity
+                    console.log("MACROO ", macroData)
+                    console.log(protein)
+                    return macroData
+                }
+                
+                
+                const data = {
+                    meal: formData.meal,
+                    quantity: formData.quantity,
+                    calories: calculateCalories(),
+                    protein: mealData.nutrients.protein,
+                    carbs: mealData.nutrients.carbs,
+                    fats: mealData.nutrients.fats
+                }
+                
+                onDataFlow(data)
+                console.log(data)
+                
+                console.log(snapshot.docs[0].data())
+            })
         }
-        
-        onDataFlow(data)
-        
-        console.log(data)
-
-    }
 
 
   
