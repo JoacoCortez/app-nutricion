@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import  {React, useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import db from "../../db/db";
@@ -53,7 +53,7 @@ function ModalFunction({onDataFlow}) {
                     const macroData = protein * formData.quantity + carbs * formData.quantity + fats * formData.quantity
                     console.log("MACROO ", macroData)
                     console.log(protein)
-                    return macroData
+                    return macroData.toFixed()
                 }
                 
                 
@@ -61,9 +61,9 @@ function ModalFunction({onDataFlow}) {
                     meal: formData.meal,
                     quantity: formData.quantity,
                     calories: calculateCalories(),
-                    protein: mealData.nutrients.protein,
-                    carbs: mealData.nutrients.carbs,
-                    fats: mealData.nutrients.fats
+                    protein: mealData.nutrients.protein * formData.quantity,
+                    carbs: mealData.nutrients.carbs * formData.quantity,
+                    fats: mealData.nutrients.fats * formData.quantity
                 }
                 
                 onDataFlow(data)

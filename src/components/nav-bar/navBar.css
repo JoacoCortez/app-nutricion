@@ -1,8 +1,9 @@
 #nav-container{
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
     
+    background-color: #9CFF2E;
     
 }
 
@@ -15,7 +16,9 @@
 }
 
 .logo{
-    padding-right: 800px;
+    
+    
+    /* padding-right: 800px; */
 
 }
 

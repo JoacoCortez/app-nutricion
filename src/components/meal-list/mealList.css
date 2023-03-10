@@ -1,12 +1,10 @@
 #acordion{
-    margin: 0 5%;
+    margin: 5% 20% 0 20%;
 
 }
 
 #acordion-header button{
-    display: flex;
-    justify-content: center;
-    text-align: center;
+    
 
 
 }

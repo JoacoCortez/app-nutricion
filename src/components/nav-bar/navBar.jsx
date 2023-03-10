@@ -8,12 +8,7 @@ function NavBar(){
     return(
         <div id="nav-container">
             <div> 
-                <img src="" alt="Logo" className="logo"/>
-                <ul className="nav-list">
-                    <a href="#">Home</a>
-                    <a href="#">Algo del alimento??¿?</a>
-                    <a href="#">About</a>
-                </ul>
+                <p>COMA DE MIERDA</p>{/* <img src="" alt="Logo" className="logo"/> */}
             </div>
         </div>
 

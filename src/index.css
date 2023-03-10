@@ -3,8 +3,10 @@ body {
   padding: 0;
   box-sizing: border-box;
  
+  text-align: center;
   background-image: url("./media/testbg.jpg");
 }
+
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
