@@ -1,7 +1,7 @@
-import React, { useContext, useState } from "react"
+import {React, useContext, useState } from "react"
 import { MealContext } from "../../context/mealContext";
-import calculateCalories from "../../logic/calculate"
-import ModalFunction from "../Modal/Modal"
+import calculateCalories from "../../logic/calculate";
+import ModalFunction from "../Modal/Modal";
 import "./addMeal.css";
 
 function AddMeal(){

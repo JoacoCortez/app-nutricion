@@ -1,4 +1,4 @@
-import  {React, useContext, useEffect } from "react";
+import  React, { useContext, useEffect } from "react";
 import "./measurer.css";
 import { Doughnut } from "react-chartjs-2";
 import { Chart, ArcElement, Tooltip, Legend } from "chart.js";
@@ -39,11 +39,20 @@ function Measurer(){
     
     
         return(
-            <div className="graphic-container">
+            <div className="section-divisor">
+                <ul className="macro-list">
+                    <li className="carbs-list">Carbohidratos: </li>
+                    <li className="protein-list">Proteinas: </li>
+                    <li className="fats-list">Grasas: </li>
+                </ul>
                 
-                <Doughnut data={data} options={options}/>
-    
-    
+                <div className="graphic-container">
+                        
+                    <Doughnut data={data} options={options}/>
+            
+            
+                </div>
+
             </div>
         )
     }else{
@@ -64,7 +73,7 @@ function Measurer(){
             labels: ["Proteina", "Carbohidratos", "Grasas"],
             datasets: [{
                 data: [totalProtein, totalCarbs, totalFats ],
-                backgroundColor: ["brown", "blue", "yellow"],
+                backgroundColor: ["brown", "blue", "yellow"]
                 
             
             }]
@@ -76,12 +85,15 @@ function Measurer(){
     
     
         return(
-            <div className="graphic-container">
-                
-                <Doughnut data={data} options={options}/>
-    
-    
-            </div>
+            <div className="section-divisor">
+                <div className="graphic-container">
+                    
+                    <Doughnut data={data} options={options}/>
+        
+        
+                </div>
+
+            </div>    
         )
 
     }

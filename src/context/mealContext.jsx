@@ -14,7 +14,7 @@ const MealProvider = ({children}) =>{
             totalData,
             setTotalData
         
-        ]}>,
+        ]}>
             {children}
         </MealContext.Provider>
         )

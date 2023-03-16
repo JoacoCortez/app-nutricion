@@ -8,7 +8,7 @@ function NavBar(){
     return(
         <div id="nav-container">
             <div> 
-                <p>COMA DE MIERDA</p>{/* <img src="" alt="Logo" className="logo"/> */}
+                <p>Nutri App</p>{/* <img src="" alt="Logo" className="logo"/> */}
             </div>
         </div>
 

@@ -1,8 +1,9 @@
-import  {React, useState } from 'react';
+import  React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import db from "../../db/db";
 import { collection, getDoc, getDocs, query, where } from '@firebase/firestore';
+import "./modal.css";
 
 function ModalFunction({onDataFlow}) {
     const [show, setShow] = useState(false);
@@ -77,16 +78,16 @@ function ModalFunction({onDataFlow}) {
   
     return (
         <>
-            <Button variant="primary" onClick={handleShow}>
+            <button className="add-meal-button" onClick={handleShow}>
                 +
-            </Button>
+            </button>
 
             <Modal show={show} onHide={handleClose}>
                 <Modal.Header closeButton>
                 <Modal.Title>Agrega una comida</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
-                    En el espacio en blanco indicá la comida seguido de la cantidad en gr/mll
+                    <p>Indicá la comida seguido de la cantidad en gr/mll</p>
                     <div>
                         <form onSubmit={handleSubmit}>
                             <input type="text" name="meal" value={formData.meal} onChange={handleChange}  placeholder="Comida" required/>

@@ -1,11 +1,14 @@
 .meal-container{
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: column;
+        
 
-    margin: 5px 10%;
+    margin: 5px 0;
 
+}
 
+.meal-container p{
+    
 
 
 }

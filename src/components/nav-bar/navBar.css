@@ -3,8 +3,10 @@
     align-items: center;
     justify-content: center;
     
+    height: 7vh;
     background-color: #9CFF2E;
-    
+    border-bottom: 1px black solid;
+
 }
 
 #nav-container div{

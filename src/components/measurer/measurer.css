@@ -1,11 +1,26 @@
-.graphic-container{
-    margin: 5% 20%;
-    max-height: 300px;
-    background-color: white;
-    border: 1px black solid;
-    border-radius: 8px;
-    padding: 10px;
-
+.section-divisor{
+    padding-top: 8%;
     display: flex;
-    justify-content: center;
+    
+    flex-direction: row;
+    background-color: white;
+
+}
+
+.macro-list{
+    margin: 5% 0 0 13%;
+    line-height: 3rem;
+}
+
+.macro-list li{
+    
+    
+}
+
+
+.graphic-container{
+    max-height: 300px;
+    padding: 10px;
+    margin: 0 5%;;
+    
 }

@@ -8,3 +8,64 @@
 
 
 }
+
+.cards-container{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    height: 50vh;
+    margin: 10% 10%;
+}
+
+.card-meal{
+    height: 50%;
+    width: 12%;
+    border: 1px grey solid;
+    border-radius: 4%;
+  
+
+}
+
+
+h3{
+    margin-top: 8%;
+    color: white;
+}
+
+button{
+    margin-top: 40%;
+    
+}
+
+.card-content-inactive{
+    height: 0;
+    overflow: hidden;
+    transition: all 0.5s ease;
+
+}
+
+.card-content-active{
+    margin-top: 20%;
+    height: 300px;
+    transition: all 0.5s ease;
+    background-color: red;
+    border: 1px grey solid;
+    border-radius: 4%;
+
+} 
+
+
+
+.meal-data{
+    list-style-type: none;
+    
+
+
+}
+
+.card-collapse{
+
+    
+}
