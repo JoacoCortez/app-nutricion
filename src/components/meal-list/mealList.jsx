@@ -36,8 +36,7 @@ function MealList(){
 
     function toggleActive(index){
         setIsActive(!isActive)
-        setActiveContent(!activeContent)
-        
+
         setActiveButtons(prevState => {
             const newState = {...prevState} 
             newState[index] = !prevState[index]   //the newState is the oposite of the current state 

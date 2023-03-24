@@ -1,6 +1,7 @@
 import MealList from './components/meal-list/mealList';
 import Measurer from './components/measurer/measurer';
 import NavBar from './components/nav-bar/navBar';
+import MealPlan from './components/mealPlan/mealPlan';
 import "./App.css";
 
 
@@ -9,9 +10,10 @@ function App() {
     <div className="App">
       <NavBar/>
       <MealList/>
-      <Measurer/>
-    
-    
+      <div className='section-divisor'>
+        <Measurer/>
+        <MealPlan/>
+      </div>
     </div>
   )
 }

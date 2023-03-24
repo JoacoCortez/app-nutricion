@@ -39,13 +39,12 @@ function Measurer(){
     
     
         return(
-            <div className="section-divisor">
+            <div className="graph-section-container">
                 <ul className="macro-list">
                     <li className="carbs-list">Carbohidratos: </li>
                     <li className="protein-list">Proteinas: </li>
                     <li className="fats-list">Grasas: </li>
                 </ul>
-                
                 <div className="graphic-container">
                         
                     <Doughnut data={data} options={options}/>
@@ -85,7 +84,12 @@ function Measurer(){
     
     
         return(
-            <div className="section-divisor">
+            <div className="graph-section-container">
+                <ul className="macro-list">
+                    <li className="carbs-list">Carbohidratos: </li>
+                    <li className="protein-list">Proteinas: </li>
+                    <li className="fats-list">Grasas: </li>
+                </ul>
                 <div className="graphic-container">
                     
                     <Doughnut data={data} options={options}/>

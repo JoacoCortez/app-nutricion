@@ -1,0 +1,57 @@
+.mealPlan-container{
+    padding-left: 30%;
+    margin-right: 13%;
+    
+    flex: 1;
+
+}
+
+.mealPlan-container h2{
+    padding-bottom: 2%;
+    
+    
+    font-weight: bold;
+    color: black;
+
+}
+
+.mealPlan-list div{
+    margin-bottom: 0.5rem;
+    
+    border: 1px solid black;
+    border-radius: 20px;
+
+    cursor: pointer;
+    
+}
+
+.mealPlan-list-text{
+    margin: 0;
+    padding: 2% 4%;
+    
+    text-align: start;
+
+}
+
+.meal-description{
+    border-bottom: 1px solid black;
+    text-align: start;
+
+}
+
+.meal-description h2{
+    text-align: start;
+
+}
+
+.meal-aliments{
+
+
+
+}
+
+.meal-aliments h3{
+    color: black;
+    text-align: start;
+
+}

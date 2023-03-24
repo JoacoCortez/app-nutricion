@@ -22,9 +22,10 @@
 .card-meal{
     height: 50%;
     width: 12%;
+    
     border: 1px grey solid;
     border-radius: 4%;
-  
+    outline: none;
 
 }
 
@@ -36,7 +37,9 @@ h3{
 
 button{
     margin-top: 40%;
-    
+    padding: 3% 6%;
+    border-radius: 16%;
+    border: 1px solid white;
 }
 
 .card-content-inactive{
@@ -47,10 +50,11 @@ button{
 }
 
 .card-content-active{
-    margin-top: 20%;
+    margin-top: 37%;
     height: 300px;
     transition: all 0.5s ease;
     background-color: red;
+    
     border: 1px grey solid;
     border-radius: 4%;
 

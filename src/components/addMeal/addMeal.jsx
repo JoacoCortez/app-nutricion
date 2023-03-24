@@ -10,8 +10,17 @@ function AddMeal(){
 
   // The prevData => [...prevData, mealData] function inside setMealData is a callback function that takes the previous state prevData as an argument and returns a new state that is an array of the previous state (...prevData) and the new meal data (mealData) that is passed in as an argument.
   async function handleAddMeal(newMeal) {
-    await setMealData(prevData => [...prevData, newMeal]);
-    await setTotalData(prevData => [...prevData, newMeal]);
+    if(mealData.find(objet => objet.meal == newMeal.meal)){
+      alert("El artículo ya esta en la lista")
+      return
+
+    }else {
+      await setMealData(prevData => [...prevData, newMeal]);
+      await setTotalData(prevData => [...prevData, newMeal]);
+
+    }
+    
+    
     
     console.log(mealData)
     console.log(totalData)
@@ -38,7 +47,7 @@ function AddMeal(){
           <p>Artículo: {data.meal}</p>
           <p>gr/mll: {data.quantity}</p>
           <p>Calorías: {data.calories}</p>
-          <button onClick={() => handleDelete(data)}>-</button>
+          <button className="delete-button" onClick={() => handleDelete(data)}>-</button>
         </div>
       ))}
     </div>

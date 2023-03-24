@@ -1,5 +1,8 @@
 .add-meal-button{
-    margin: 0;
-
+    margin-top: 20%;
+    padding: 3% 6%;
+    border: 1px black solid;
+    border-radius: 10%;
+    
 
 }

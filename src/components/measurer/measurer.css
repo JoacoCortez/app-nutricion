@@ -1,14 +1,12 @@
-.section-divisor{
-    padding-top: 8%;
+.graph-section-container{
     display: flex;
-    
     flex-direction: row;
-    background-color: white;
+    padding-left: 9%;
 
 }
 
 .macro-list{
-    margin: 5% 0 0 13%;
+    margin: 5% 0 0 11%;
     line-height: 3rem;
 }
 

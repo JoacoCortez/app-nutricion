@@ -25,7 +25,9 @@ function ModalFunction({onDataFlow}) {
     function handleChange(e){
 
         setFormData(({
+        
             ...formData, [e.target.name]: e.target.value
+            
         }))
 
     }
@@ -36,8 +38,15 @@ function ModalFunction({onDataFlow}) {
     
     async function handleSubmit(e){
         e.preventDefault()
+        console.log(formData)
+
+        if(formData.quantity < 1){
+            alert("Cantidad invalida")
+            return
+        }
         
         
+
         const mealList = collection(db, "meals")
         const mealNutrients = query(mealList, where("meal", "==", formData.meal))
         
@@ -67,10 +76,17 @@ function ModalFunction({onDataFlow}) {
                     fats: mealData.nutrients.fats * formData.quantity
                 }
                 
+                
+                
                 onDataFlow(data)
                 console.log(data)
                 
                 console.log(snapshot.docs[0].data())
+            })
+            handleClose()
+            setFormData({
+                meal: "",
+                quantity: ""
             })
         }
 
