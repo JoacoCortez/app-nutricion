@@ -24,17 +24,17 @@ export default function MealPlan() {
         <div className='mealPlan-container'>
             <h2>Plan de comidas</h2>
             <div className="mealPlan-list">
-                <div onClick={handleShow1}>
+                <div className="mealPlan-container-high-protein" onClick={handleShow1}>
                     <img src="" alt="" />
-                    <p className="mealPlan-list-text" >Mediterraneo</p>
+                    <p className="mealPlan-list-text" >Alta en Proteínas</p>
                 </div>
-                <div onClick={handleShow2}>
-                    <img src="" alt="" />
-                    <p className="mealPlan-list-text" >Bajo en Carbohidratos</p>
-                </div>
-                <div onClick={handleShow3}>
+                <div className="mealPlan-container-intermitent" onClick={handleShow2}>
                     <img src="" alt="" />
                     <p className="mealPlan-list-text" >Ayuno Intermitente</p>
+                </div>
+                <div className="mealPlan-container-balanced" onClick={handleShow3}>
+                    <img src="" alt="" />
+                    <p className="mealPlan-list-text" >Equilibrada</p>
                 </div>
             </div>
         </div>
@@ -45,13 +45,26 @@ export default function MealPlan() {
                 <Modal.Title>Modal heading</Modal.Title>
             </Modal.Header>
             <Modal.Body>
-                <div className="meal-description">    
-                    <h2>Mediterraneo</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas odit, incidunt eveniet tenetur necessitatibus amet aliquam soluta, placeat illo iste laborum consequuntur voluptatem distinctio in! Minima natus, dolore soluta in ut sit incidunt.</p>
+                <div className="meal-description-high-protein">    
+                    <h2>Alta en proteínas</h2>
+                    <p>Desde hace tiempo se ha popularizado la sustitución de carbohidratos por proteínas como método rápido para perder peso. Esta dieta sigue principios similares a la keto, pero no es tan estricta con el consumo de hidratos.</p>
                 </div>
                 <div className="meal-aliments">
-                    <h3>Alimentos necesarios</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis asperiores, dolores sapiente tempora officia illum iste quam voluptatem magnam animi esse aliquid doloremque soluta aut quidem eaque expedita minima, sit ut sequi alias, vel dignissimos. Ex quam repellat quo facilis.</p>
+                    <h3>Alimentos habituales</h3>
+                    <ul className="meal-plan-list">
+                    <li>Frutas & verduras:
+                            <p>Palta, Mango, Banana, Cebolla, Lechuga, Tomate</p>
+                        </li>
+                        <li>Carnes:
+                            <p>Huevo, Churrasco, Pollo sin piel, Atún, Salmón</p>
+                        </li>
+                        <li>Cereales & Legumbres: 
+                            <p>Arróz, Porotos</p>
+                        </li>
+                        <li>Lácteos: 
+                            <p>Yogur griego, Leche descremada, Queso crema</p>
+                        </li>
+                    </ul>
                 </div>
             </Modal.Body>
             <Modal.Footer>
@@ -64,7 +77,29 @@ export default function MealPlan() {
             <Modal.Header closeButton>
                 <Modal.Title>Modal heading</Modal.Title>
             </Modal.Header>
-            <Modal.Body>222222222222222222222222222</Modal.Body>
+            <Modal.Body>
+                <div className="meal-description-intermitent">    
+                    <h2>Ayuno intermitente</h2>
+                    <p>El ayuno intermitente funciona reduciendo drásticamente la ingesta calórica durante un par de días de la semana, mientras que el resto de los días se mantiene en niveles normales. Con el tiempo, debería reducir su apetito en general y favorecer la pérdida de peso a través de un déficit calórico.</p>
+                </div>
+                <div className="meal-aliments">
+                    <h3>Alimentos habituales</h3>
+                    <ul className="meal-plan-list">
+                    <li>Frutas & verduras:
+                            <p>Pomelo, Banana, Palta, Choclo, Espinaca, Calabaza</p>
+                        </li>
+                        <li>Carnes:
+                            <p>Atún, Churrasco, Huevo</p>
+                        </li>
+                        <li>Cereales & Legumbres: 
+                            <p>Avena, Arróz</p>
+                        </li>
+                        <li>Lácteos: 
+                            <p>Queso fresco, Leche descremada, Yogur</p>
+                        </li>
+                    </ul>
+                </div>
+            </Modal.Body>
             <Modal.Footer>
                 
             </Modal.Footer>
@@ -75,7 +110,29 @@ export default function MealPlan() {
             <Modal.Header closeButton>
                 <Modal.Title>Modal heading</Modal.Title>
             </Modal.Header>
-            <Modal.Body>333333333333333333333333333333!</Modal.Body>
+            <Modal.Body>
+                <div className="meal-description-balanced">    
+                    <h2>Equilibrada</h2>
+                    <p>Una dieta equlibrada que consta de alimentos frescos, carnes magras, pescado, cereales integrales y productos animales bajos en grasa es la mejor manera de asegurar que se satisfagan todas sus necesidades nutricionales.</p>
+                </div>
+                <div className="meal-aliments">
+                    <h3>Alimentos habituales</h3>
+                    <ul className="meal-plan-list">
+                        <li>Frutas & verduras:
+                            <p>Naranja,Durazno, Champiniones, Rúcula, Zanahoria</p>
+                        </li>
+                        <li>Carnes:
+                            <p>Salmón, Pollo, Langostinos, Carne vacuna</p>
+                        </li>
+                        <li>Cereales & Legumbres: 
+                            <p>Granola, Nueces, Arróz</p>
+                        </li>
+                        <li>Lácteos: 
+                            <p>Leche, Yogur, Queso crema</p>
+                        </li>
+                    </ul>
+                </div>
+            </Modal.Body>
             <Modal.Footer>
                 
             </Modal.Footer>

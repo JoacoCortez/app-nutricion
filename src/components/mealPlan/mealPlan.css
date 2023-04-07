@@ -1,8 +1,50 @@
 .mealPlan-container{
-    padding-left: 30%;
-    margin-right: 13%;
+    margin: 0 13% 0 15%;
     
     flex: 1;
+
+}
+
+.mealPlan-list div{
+    opacity: 0.5;
+    
+}
+
+.mealPlan-list div:hover{
+    opacity: 1;
+    transition: all 0.5s ease;
+}
+
+.mealPlan-container-high-protein{
+    background-image: url("../../media/high-protein.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.mealPlan-container-intermitent{
+    background-image: url("../../media/bolognesa.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.mealPlan-container-balanced{
+    background-image: url("../../media/balanced2.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.meal-description-high-protein:not(h2):not(p){
+    background-image: url("../../media/high-protein.jpg");
+    background-position: center;
+    background-size: cover;
+    opacity: 0.8;
+}
+
+.meal-description-intermitent{
+
+}
+
+.meal-description-balanced{
 
 }
 
@@ -12,7 +54,6 @@
     
     font-weight: bold;
     color: black;
-
 }
 
 .mealPlan-list div{
@@ -30,22 +71,29 @@
     padding: 2% 4%;
     
     text-align: start;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
 
 }
 
-.meal-description{
-    border-bottom: 1px solid black;
+.modal-body div{
+   
+    
+}
+
+.modal-body div h2{
     text-align: start;
 
 }
 
-.meal-description h2{
+.modal-body div p{
     text-align: start;
 
 }
 
 .meal-aliments{
-
+    text-align: start;
 
 
 }
@@ -53,5 +101,39 @@
 .meal-aliments h3{
     color: black;
     text-align: start;
+    
+    padding: 5% 0;
+    border-top: 1px solid black;
+    
+}
+
+@media all and (max-width: 1024px){
+    .mealPlan-container{
+        margin: 0 7%;
+
+    }
+
+
+}
+
+
+@media all and (max-width: 768px){
+
+    .mealPlan-container{
+        display: none;
+
+    }
+
+
+}
+
+
+@media all and (max-width: 425px){
+
+    .mealPlan-container{
+        display: none;
+
+    }
+
 
 }

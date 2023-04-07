@@ -1,0 +1,120 @@
+.add-meal-button{
+    
+    padding: 3% 6%;
+    border: 1px black solid;
+    border-radius: 10%;
+    
+
+}
+
+.meal-form{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+
+    text-align: start;
+}
+
+.meal-form-quantity-container{
+  width: 100%;
+  flex: 1;
+  
+}
+
+
+
+.meal-form input{
+  border-radius: 6px;
+  margin: 0 2%;
+}
+
+.plus-button{
+  width: 34px;
+  height: 34px;
+
+  border-radius: 50%;
+  border: 1px solid black;
+  padding: 4px;
+  
+}
+
+.minus-button{
+  width: 34px;
+  height: 34px;
+
+  border-radius: 50%;
+  border: 1px solid black;
+  padding: 4px;
+  
+  margin-left: 3%;
+}
+
+#submit-button{
+  border-radius: 25px;
+  
+  padding: 8px;
+  margin: 0 3%;
+
+  width: 15%;
+
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+@media all and (max-width: 1024px){
+  
+  #submit-button{
+    margin: 0 1%;
+  }
+
+  .minus-button{
+    margin-left: 1%;
+  }
+
+}
+
+
+@media all and (max-width: 768px){
+  .meal-form{
+    display: flex;
+    flex-direction: column;
+    align-items: normal;
+  }
+
+  
+  .meal-form-quantity-container{
+    margin-bottom: 4%;
+  
+  }
+
+  .meal-form label{
+    margin: 2% 0 2% 2%;
+
+  }
+  
+  .quantity-input{
+    width: 40%;
+    margin-top: 4%;
+  }
+
+  #submit-button{
+    margin: auto;
+    width: 70%;
+
+  }
+
+}
+
+@media all and (max-width: 425px){
+  #submit-button{
+    width: 50%;
+  }
+
+
+
+}
