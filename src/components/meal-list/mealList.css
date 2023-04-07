@@ -1,75 +1,107 @@
-#acordion{
-    margin: 5% 20% 0 20%;
+#my-acordion{
+    margin: 10% 12%;
 
+    --bs-accordion-inner-border-radius: 0;
+    --bs-accordion-border-width: 0;
+
+    --bs-accordion-bg: #40513B;
+}
+
+.acordion-body-bg{
+    /* background-color: #9DC08B; */
+    min-height: 3rem;
+
+}
+
+#my-acordion .accordion-item{
+    border-radius: 1rem;
+}
+
+
+#acordion-element{
+    margin-top: 1.5rem;
+    
+    --bs-accordion-color: white;
+    --bs-accordion-btn-focus-border-color: none;
+    --bs-accordion-btn-focus-box-shadow: 0;
+    --bs-accordion-active-bg: white;
+    
+}
+
+#acordion-header{
+    border-radius: 1rem;
 }
 
 #acordion-header button{
-    
-
-
-}
-
-.cards-container{
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: flex-start;
-    height: 50vh;
-    margin: 10% 10%;
-}
-
-.card-meal{
-    height: 50%;
-    width: 12%;
-    
-    border: 1px grey solid;
-    border-radius: 4%;
-    outline: none;
-
-}
-
-
-h3{
-    margin-top: 8%;
+    border-radius: 1rem;
+    height: 5rem;
     color: white;
-}
-
-button{
-    margin-top: 40%;
-    padding: 3% 6%;
-    border-radius: 16%;
-    border: 1px solid white;
-}
-
-.card-content-inactive{
-    height: 0;
-    overflow: hidden;
-    transition: all 0.5s ease;
-
-}
-
-.card-content-active{
-    margin-top: 37%;
-    height: 300px;
-    transition: all 0.5s ease;
-    background-color: red;
-    
-    border: 1px grey solid;
-    border-radius: 4%;
-
-} 
-
-
-
-.meal-data{
-    list-style-type: none;
-    
-
-
-}
-
-.card-collapse{
-
     
 }
+
+#acordion-header button:focus{
+    border: 0;
+   
+}
+
+
+#acordion-header .accordion-button:not(.collapsed){
+    color: black;
+
+}
+
+
+@media all and (max-width: 1024px){
+    #my-acordion{
+        margin: 7%;
+
+
+    }
+
+    #acordion-header button{
+        height: 4rem;
+    
+    }
+
+
+    .acordion-body-bg{
+        min-height: 2rem;
+        padding: 3% 2%;
+    }
+}
+
+@media all and (max-width: 425px){
+    #my-acordion{
+        margin: 30% 4%;
+        min-height: 70vh;
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

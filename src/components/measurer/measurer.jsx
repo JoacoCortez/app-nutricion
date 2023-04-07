@@ -1,10 +1,10 @@
 import  React, { useContext, useEffect } from "react";
 import "./measurer.css";
 import { Doughnut } from "react-chartjs-2";
-import { Chart, ArcElement, Tooltip, Legend } from "chart.js";
+import { Chart, ArcElement, Tooltip, Legend, } from "chart.js";
 import { MealContext } from "../../context/mealContext";
 
-Chart.register(ArcElement, Tooltip, Legend);
+Chart.register(ArcElement, Tooltip);
 
 function Measurer(){
     const dataMeal = useContext(MealContext)
@@ -39,7 +39,7 @@ function Measurer(){
     
     
         return(
-            <div className="graph-section-container">
+            <div id="graph-section-container">
                 <ul className="macro-list">
                     <li className="carbs-list">Carbohidratos: </li>
                     <li className="protein-list">Proteinas: </li>
@@ -84,7 +84,7 @@ function Measurer(){
     
     
         return(
-            <div className="graph-section-container">
+            <div id="graph-section-container">
                 <ul className="macro-list">
                     <li className="carbs-list">Carbohidratos: </li>
                     <li className="protein-list">Proteinas: </li>

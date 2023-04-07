@@ -3,18 +3,16 @@ import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import db from "../../db/db";
 import { collection, getDoc, getDocs, query, where } from '@firebase/firestore';
-import "./modal.css";
+import "./mealForm.css";
 
-function ModalFunction({onDataFlow}) {
-    const [show, setShow] = useState(false);
+function MealForm({onDataFlow}) {
+    
+    const [count, setCount] = useState(0)
+    
     const [formData, setFormData] = useState({
         meal: "",
-        quantity: ""
+        quantity: 0
     })
-
-    const handleClose = () => setShow(false);
-    const handleShow = () => setShow(true);
-
   
     const calPerProt = 4.00
     const calPerCarb = 4.00
@@ -32,7 +30,20 @@ function ModalFunction({onDataFlow}) {
 
     }
     
+    async function handlePlus(){
+        if(formData.meal.length !== 0){
+            const newQuantity = await parseInt(formData.quantity) + 1
+            await setFormData({...formData, quantity: newQuantity})    
+            console.log("FORM DATA ACAAA ", formData)
+        }
+    }
     
+    function handleMinus(){
+        if(formData.quantity > 0){
+            const newQuantity = parseInt(formData.quantity) - 1
+            setFormData({...formData, quantity: newQuantity})
+        }
+    }
     
     
     
@@ -83,10 +94,9 @@ function ModalFunction({onDataFlow}) {
                 
                 console.log(snapshot.docs[0].data())
             })
-            handleClose()
             setFormData({
                 meal: "",
-                quantity: ""
+                quantity: 0
             })
         }
 
@@ -94,30 +104,23 @@ function ModalFunction({onDataFlow}) {
   
     return (
         <>
-            <button className="add-meal-button" onClick={handleShow}>
-                +
-            </button>
 
-            <Modal show={show} onHide={handleClose}>
-                <Modal.Header closeButton>
-                <Modal.Title>Agrega una comida</Modal.Title>
-                </Modal.Header>
-                <Modal.Body>
-                    <p>Indicá la comida seguido de la cantidad en gr/mll</p>
-                    <div>
-                        <form onSubmit={handleSubmit}>
-                            <input type="text" name="meal" value={formData.meal} onChange={handleChange}  placeholder="Comida" required/>
-
-                            <input type="number" name="quantity"  value={formData.quantity} onChange={handleChange} placeholder="gr/mll" required/>
-
-                            <input type="submit" value="Agregar"/>
-                        </form>
-                    </div>
-                </Modal.Body>
+            <form className='meal-form' onSubmit={handleSubmit}>
+                <label htmlFor="meal">Alimento</label>
+                <input className='meal-input' type="text" name="meal" value={formData.meal} onChange={handleChange} required/>
                 
-            </Modal>
+                <label htmlFor="quantity">Cantidad en gr/mll</label>
+                <div className="meal-form-quantity-container">
+                    <input className='quantity-input' type="number" name="quantity"  value={formData.quantity} onChange={handleChange} required/>
+                    <button className="plus-button" type="button" onClick={() => handlePlus()}>+</button>
+                    <button className="minus-button" type="button" onClick={() => handleMinus()}>-</button>
+                </div>    
+
+                <input id="submit-button" type="submit" value="Agregar"/>
+            </form>
+                   
         </>
     );
 }
 
-export default ModalFunction
+export default MealForm

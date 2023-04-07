@@ -2,6 +2,7 @@ import MealList from './components/meal-list/mealList';
 import Measurer from './components/measurer/measurer';
 import NavBar from './components/nav-bar/navBar';
 import MealPlan from './components/mealPlan/mealPlan';
+import FooterMobile from './components/footerMobile/footerMobile';
 import "./App.css";
 
 
@@ -14,6 +15,7 @@ function App() {
         <Measurer/>
         <MealPlan/>
       </div>
+      <FooterMobile/>
     </div>
   )
 }

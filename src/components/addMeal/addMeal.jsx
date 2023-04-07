@@ -1,7 +1,7 @@
 import {React, useContext, useState } from "react"
 import { MealContext } from "../../context/mealContext";
 import calculateCalories from "../../logic/calculate";
-import ModalFunction from "../Modal/Modal";
+import MealForm from "../mealForm/mealForm";
 import "./addMeal.css";
 
 function AddMeal(){
@@ -41,17 +41,18 @@ function AddMeal(){
   
   return(
       <>
-        <div>
-      {mealData.map((data, index) => (
-        <div className="meal-container" key={index}>
-          <p>Artículo: {data.meal}</p>
-          <p>gr/mll: {data.quantity}</p>
-          <p>Calorías: {data.calories}</p>
-          <button className="delete-button" onClick={() => handleDelete(data)}>-</button>
-        </div>
-      ))}
-    </div>
-      <ModalFunction onDataFlow={handleAddMeal}/>
+      <MealForm onDataFlow={handleAddMeal}/>
+      
+      <div>
+        {mealData.map((data, index) => (
+          <div className="meal-container" key={index}>
+            <p>Artículo: {data.meal}</p>
+            <p>gr/mll: {data.quantity}</p>
+            <p>Calorías: {data.calories}</p>
+            <button className="delete-button" onClick={() => handleDelete(data)}>-</button>
+          </div>
+        ))}
+      </div>
       </>
   )
 

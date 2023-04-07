@@ -3,8 +3,8 @@
     align-items: center;
     justify-content: center;
     
-    height: 7vh;
-    background-color: #9CFF2E;
+    height: 8vh;
+    background-color: #9DC08B;
     border-bottom: 1px black solid;
 
 }
@@ -15,6 +15,11 @@
     flex-wrap: wrap;    
     
 
+}
+
+#nav-container div p{
+    font-size: 2rem;
+    
 }
 
 .logo{
@@ -30,5 +35,22 @@
 
 .nav-list a{
     padding: 15px;
+
+}
+
+
+@media all and (max-width: 1024px){
+    #nav-container{
+        height: 13vh;
+
+    }
+}
+
+@media all and (max-width: 768px){
+    #nav-container{
+        height: 9vh;
+
+    }
+
 
 }

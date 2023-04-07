@@ -1,13 +1,19 @@
-.graph-section-container{
+#graph-section-container{
     display: flex;
-    flex-direction: row;
+    flex-direction: column-reverse;
+    
+    
     padding-left: 9%;
-
+    flex: 1;
 }
 
 .macro-list{
-    margin: 5% 0 0 11%;
+    margin: 4% 0;
     line-height: 3rem;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }
 
 .macro-list li{
@@ -19,6 +25,38 @@
 .graphic-container{
     max-height: 300px;
     padding: 10px;
-    margin: 0 5%;;
+    margin: auto;
     
+}
+
+@media all and (max-width: 1024px){
+    
+
+    
+}
+
+
+
+@media all and (max-width: 768px){
+
+#graph-section-container{
+    padding: 0 0 15% 0;
+    margin: 0 10%;
+    flex: 1;
+    min-height: 350px;
+}
+
+
+}
+
+@media all and (max-width: 425px){
+    #graph-section-container{
+        display: flex;
+        flex-direction: column-reverse;
+
+        margin: 0;
+
+    }
+
+
 }
