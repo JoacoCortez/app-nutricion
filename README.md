@@ -2,7 +2,7 @@
 
 "Nutri App" es una aplicación web diseñada para ayudarte a mantener la cuenta de las calorías y los micronutrientes consumidos en el día a día.
 
-## IMPORTANTE :danger: 
+## IMPORTANTE :exclamation: 
 
 Esta es una versión demo y la base de datos solamente contiene estos alimentos:
 
