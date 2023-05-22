@@ -1,9 +1,10 @@
-.mealPlan-container{
+#mealPlan-container{
     margin: 0 13% 0 15%;
     
     flex: 1;
 
 }
+
 
 .mealPlan-list div{
     opacity: 0.5;
@@ -33,18 +34,18 @@
     background-size: cover;
 }
 
-.meal-description-high-protein:not(h2):not(p){
-    background-image: url("../../media/high-protein.jpg");
-    background-position: center;
-    background-size: cover;
-    opacity: 0.8;
-}
-
-.meal-description-intermitent{
+.my-modal-container{
+    
+    padding: 0;
 
 }
 
-.meal-description-balanced{
+.my-modal-container > *:not(.meal-aliments-list, .meal-aliments){
+    padding: 1rem;
+}
+
+.modal-body{
+    padding: 0;
 
 }
 
@@ -59,11 +60,10 @@
 .mealPlan-list div{
     margin-bottom: 0.5rem;
     
-    border: 1px solid black;
     border-radius: 20px;
-
-    cursor: pointer;
+    outline: 0;
     
+    cursor: pointer;
 }
 
 .mealPlan-list-text{
@@ -95,17 +95,35 @@
 .meal-aliments{
     text-align: start;
 
-
 }
 
 .meal-aliments h3{
     color: black;
     text-align: start;
     
-    padding: 5% 0;
+    padding: 4% 1rem;
     border-top: 1px solid black;
     
 }
+
+.meal-aliments-list{
+    background-image: linear-gradient(to bottom, white, #9DC08B);
+    width: 100%;
+    padding: 0 1rem 1rem 1rem;
+    margin: 0;
+}
+
+.meal-aliments-list li{
+    margin: 1rem;
+}
+
+.modal-footer{
+    background-color: #9DC08B;
+    border-top: 1px solid black;
+}
+
+
+
 
 @media all and (max-width: 1024px){
     .mealPlan-container{
@@ -124,7 +142,9 @@
 
     }
 
-
+    .mealPlan-list div{
+        opacity: 1;
+    }
 }
 
 

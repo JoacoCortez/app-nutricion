@@ -1,8 +1,14 @@
 .footer-mobile-container{
     display: none;
-    height: 5.5rem;
+    height: 5rem;
     background-color: #9DC08B;
     outline: 0;
+
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+   
 
 }
 

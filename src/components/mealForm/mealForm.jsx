@@ -1,13 +1,9 @@
 import  React, { useState } from 'react';
-import Button from 'react-bootstrap/Button';
-import Modal from 'react-bootstrap/Modal';
 import db from "../../db/db";
 import { collection, getDoc, getDocs, query, where } from '@firebase/firestore';
 import "./mealForm.css";
 
 function MealForm({onDataFlow}) {
-    
-    const [count, setCount] = useState(0)
     
     const [formData, setFormData] = useState({
         meal: "",
@@ -61,11 +57,23 @@ function MealForm({onDataFlow}) {
         const mealList = collection(db, "meals")
         const mealNutrients = query(mealList, where("meal", "==", formData.meal))
         
+        
+        
+        const verifyMeal = await getDocs(mealNutrients);
+            if (verifyMeal.empty) {
+                alert("Es una demo, usar las comidas registradas");
+                return;
+            }
+    
+        
+        
+        
         await getDocs(mealNutrients)
         .then((snapshot) =>{
             const mealData =  snapshot.docs[0].data()
-            console.log(mealData)
+            console.log("MEAL DATA ", mealData)
             
+                
                 function calculateCalories(){
                     const protein = mealData.nutrients.protein * calPerProt 
                     const carbs = mealData.nutrients.carbs * calPerCarb 

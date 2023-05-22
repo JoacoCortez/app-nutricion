@@ -3,6 +3,7 @@ import { MealContext } from "../../context/mealContext";
 import calculateCalories from "../../logic/calculate";
 import MealForm from "../mealForm/mealForm";
 import "./addMeal.css";
+import { FaTrashAlt } from "react-icons/fa";
 
 function AddMeal(){
   const [mealData, setMealData] = useState([])
@@ -49,7 +50,7 @@ function AddMeal(){
             <p>Artículo: {data.meal}</p>
             <p>gr/mll: {data.quantity}</p>
             <p>Calorías: {data.calories}</p>
-            <button className="delete-button" onClick={() => handleDelete(data)}>-</button>
+            <button className="delete-button" onClick={() => handleDelete(data)}><FaTrashAlt/></button>
           </div>
         ))}
       </div>
