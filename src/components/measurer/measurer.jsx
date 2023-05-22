@@ -67,6 +67,13 @@ function Measurer(){
             acumulator + currentValue.fats
         ,0)
 
+
+        const totalValue = totalProtein + totalCarbs + totalFats;
+
+        const porcentageProt = ( totalProtein / totalValue) * 100;
+        const porcentageCarb = ( totalCarbs / totalValue) * 100;
+        const porcentageFat = ( totalFats / totalValue) * 100;
+
         
         const data = {
             labels: ["Proteina", "Carbohidratos", "Grasas"],
@@ -86,9 +93,9 @@ function Measurer(){
         return(
             <div id="graph-section-container">
                 <ul className="macro-list">
-                    <li className="carbs-list">Carbohidratos: </li>
-                    <li className="protein-list">Proteinas: </li>
-                    <li className="fats-list">Grasas: </li>
+                    <li className="carbs-list">Carbohidratos: %{porcentageCarb.toFixed()}</li>
+                    <li className="protein-list">Proteinas: %{porcentageProt.toFixed()}</li>
+                    <li className="fats-list">Grasas: %{porcentageFat.toFixed()}</li>
                 </ul>
                 <div className="graphic-container">
                     

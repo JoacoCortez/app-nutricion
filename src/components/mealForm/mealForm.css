@@ -27,6 +27,7 @@
 .meal-form input{
   border-radius: 6px;
   margin: 0 2%;
+  padding-left: 2%;
 }
 
 .plus-button{

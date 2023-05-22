@@ -1,7 +1,7 @@
 import React from 'react';
 import { FaHome, FaChartPie, FaMap} from "react-icons/fa";
-
 import "./footerMobile.css";
+import { Link } from 'react-router-dom';
 
 
 export default function FooterMobile() {
@@ -14,7 +14,7 @@ export default function FooterMobile() {
             <div className='home-container'>
                 <a href="#nav-container">
                     <FaHome/>
-                </a>    
+                </a>
                 
                 <p>Home</p>
             </div>
@@ -25,7 +25,7 @@ export default function FooterMobile() {
                 <p>Track</p>
             </div>
             <div className='plans-container'>
-                <a href="http://">
+                <a href="#mealPlan-container">
                     <FaMap/>
                 </a>
                 <p>Planes</p>
